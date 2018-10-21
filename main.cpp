@@ -1,6 +1,6 @@
 /*******************
 Function: Text preprocessor
-By: Doongxue Han
+By: Dongxue Han
 *******************/
 #include <iostream>
 #include <string>
@@ -12,7 +12,7 @@ using namespace std;
 
 typedef unsigned long DWORD;
 
-	/*function£ºcat row numbers, comma(",") and parentheses("()") to a string
+	/*functionï¼šcat row numbers, comma(",") and parentheses("()") to a string
 	param<in>: the number of beginning row, the number of ending row
 	return: string
 	*/
@@ -27,7 +27,7 @@ string text_processor:: cat_rows(int rowBegin, int rowEnd){
 	return res;
 }
 
-	/*function£ºcheck width in range [10, 80]
+	/*functionï¼šcheck width in range [10, 80]
 	param<in>: width of row
 	return: T/F
 	*/
@@ -38,7 +38,7 @@ bool text_processor::check_width(DWORD width){
 		throw  "ERROR: Width out of range!";
 }
 
-	/*function£ºcat row numbers, comma(",") and parentheses("()") to a string
+	/*functionï¼šcat row numbers, comma(",") and parentheses("()") to a string
 	param<in>: input raw text, row width
 	return: post-processed string
 	*/
@@ -47,8 +47,8 @@ string text_processor::process(const string& text, DWORD width){
 	int len = text.length();
 	string res;
 	int type;
-	regex pattern_char("^[a-zA-Z]+"); //Æ¥Åä¿ªÍ·ÖÁÉÙÒ»¸öÓ¢ÎÄ×Ö·û
-	regex pattern_s("^ +");     //Æ¥Åä¿ªÍ·ÖÁÉÙÒ»¸ö¿Õ¸ñ
+	regex pattern_char("^[a-zA-Z]+"); //åŒ¹é…å¼€å¤´è‡³å°‘ä¸€ä¸ªè‹±æ–‡å­—ç¬¦
+	regex pattern_s("^ +");     //åŒ¹é…å¼€å¤´è‡³å°‘ä¸€ä¸ªç©ºæ ¼
 	smatch sm;
 	auto iterStart = text.begin();
 	auto iterEnd = text.end();
